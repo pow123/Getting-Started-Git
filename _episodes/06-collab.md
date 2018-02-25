@@ -9,7 +9,7 @@ objectives:
 - "Collaborate pushing to a common repository."
 keypoints:
 - "`git clone` copies a remote repository to create a local repository with a remote called `origin` automatically set up."
---
+---
 
 This part of the lesson is modified from this [Source](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
 

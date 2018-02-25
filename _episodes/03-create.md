@@ -1,6 +1,6 @@
 ---
 title: Creating and Tracking with Git
-teaching: 25
+teaching: 20
 exercises: 20
 questions:
 - "Where does Git store information?"

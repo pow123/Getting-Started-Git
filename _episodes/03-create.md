@@ -271,6 +271,9 @@ $ cd ../../git_github
 #Or type the path directly
 $ cd ~/Desktop/SWC_spring2018/git_github
 
+#Add a file
+$ echo "Testing Testing" > testfile.txt
+
 #initialize
 $ git init
 

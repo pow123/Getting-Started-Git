@@ -1,7 +1,7 @@
 ---
 title: Collaborating
-teaching: 10
-exercises: 0
+teaching: 5
+exercises: 5
 questions:
 - "How can I use version control to collaborate with other people?"
 objectives:

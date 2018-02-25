@@ -3,8 +3,6 @@ layout: lesson
 root: .
 ---
 
-Software Carpentry Workshop: Lesson 6: Introduction to Git and Github
-===
 
 SWC workshop, February 22
 Instructor: Peace

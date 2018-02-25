@@ -1,6 +1,6 @@
 ---
 title: Remotes in GitHub
-teaching: 10
+teaching: 5
 exercises: 5
 questions:
 - "How do I share my changes with others on the web?"

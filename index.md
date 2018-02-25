@@ -3,7 +3,6 @@ layout: lesson
 root: .
 ---
 
-
 SWC workshop, February 22
 Instructor: Peace
 Time: 1.5 hours

@@ -1,6 +1,6 @@
 ---
 title: Creating and Tracking with Git
-teaching: 45
+teaching: 35
 exercises: 0
 questions:
 - "Where does Git store information?"
@@ -14,7 +14,6 @@ keypoints:
 - "Git stores all of it's repository data in the `.git` directory."
 ---
 
-## 3. Track your documents with Git
 
 Let's use Git now that it's been configured. We’ll do our work in the `SWC_spring2018` folder. Check where you are using `pwd`. To change your working directory, use the `cd` command.
 ```shell

@@ -68,10 +68,10 @@ $ git push -u origin master
 ```
 This is it! You just made your local `SWC_spring2018` repository available on GitHub for everyone to access. You are now in position to share your work and collaborate with others. How cool is this?
 
-## Optional Activity
-Suppose you want to add another file to your repository. 
-Download command history file for the Python lesson this morning and 
-add it to your local directory and then push it to Github.
-
-https://hackmd.io/IwQwrCAMCmDGAcBaSB2eAjRAWAbAZgCZEQRhpFgth4cAzKgEwIeiA===?both
+> ## Optional Activity
+> Suppose you want to add another file to your repository. 
+> Download command history file for the Python lesson this morning and 
+> add it to your local directory and then push it to Github.
+> 
+> https://hackmd.io/IwQwrCAMCmDGAcBaSB2eAjRAWAbAZgCZEQRhpFgth4cAzKgEwIeiA===?both
 

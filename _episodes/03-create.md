@@ -242,6 +242,7 @@ In summary, here are the steps that must be completed to track changes in your d
 > > no changes added to commit (use "git add" and/or "git commit -a")
 > > ~~~
 > > {: .bash}
+> > 
 > > The last line is the key phrase: “no changes added to commit.” We have changed this file, 
 > > but we haven’t told Git we will want to save those changes (which we do with `git add`) 
 > > and we haven't saved them (which we do with `git commit`). So let’s do that now:

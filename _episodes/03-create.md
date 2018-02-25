@@ -224,8 +224,8 @@ In summary, here are the steps that must be completed to track changes in your d
 > 
 > > ## Solution
 > >
-> > Open note.txt, add text, save and close. (Or, from the command line, type `open -t notes.txt` to open it in BBEdit.
-> > When we run git status now, it tells us that a file it already knows about has been modified. You can also see your new additions to note.txt with `cat`:
+> > Open `notes.txt`, add the text, save and close. (Or, from the command line, type `open -t notes.txt` to open it in BBEdit.
+> > When we run git status now, it tells us that a file it already knows about has been modified. You can also see your new additions to `notes.txt` with `cat`:
 > > ~~~
 > > $ cat notes.txt
 > > Chapter 1 notes
@@ -242,7 +242,10 @@ In summary, here are the steps that must be completed to track changes in your d
 > > no changes added to commit (use "git add" and/or "git commit -a")
 > > ~~~
 > > {: .bash}
-> > The last line is the key phrase: “no changes added to commit.” We have changed this file, but we haven’t told Git we will want to save those changes (which we do with `git add`) and we haven't saved them (which we do with `git commit`). So let’s do that now:
+> > The last line is the key phrase: “no changes added to commit.” We have changed this file, 
+> > but we haven’t told Git we will want to save those changes (which we do with `git add`) 
+> > and we haven't saved them (which we do with `git commit`). So let’s do that now:
+> > ~~~
 > > $ git add notes.txt
 > > $ git commit -m "added ch 2 notes"
 > > ~~~

@@ -19,22 +19,22 @@ You can contribute to whatever project you like. Suppose you would like to add a
 Steps for making pull requests (or PRs):
 
 - go to the project you want to contribute to
-  (https://github.com/pow123/SWC_2018-02-25)
+  (https://github.com/AnnaWilliford/SWC_Spring2018_lessons)
 
 - copy the project to your GitHub account by clicking `fork` button on the top right corner of the page.
 
-You should now have a new repository called `SWC_2018-02-25` in **YOUR** account. You can now copy other projects/repositories to your GitHub account!
+You should now have a new repository called `SWC_Spring2018_lessons` in **YOUR** account. You can now copy other projects/repositories to your GitHub account!
 
 You can also copy a remote repository to the local machine, let's say, to the Desktop. From your local terminal, type:
 ```
-$ git clone https://github.com/YourUsername/SWC_2018-02-25.git ~/Desktop/SWC_2018-02-25.git
+$ git clone https://github.com/YourUsername/SWC_2018-02-25.git ~/Desktop/SWC_Spring2018_lessons.git
 ```
-You now have all lessons from this session both on your GitHub account and on your local machine! And, of course, you have access to any public repository on GitHub in a similar way.
+You now have all lessons both on your GitHub account and on your local machine! And, of course, you have access to any public repository on GitHub in a similar way.
 
 Now, what is even better, you can contribute to the project you forked/cloned(copied) by suggesting changes to the documents in the repository. If, for example, you find a better way to explain some topic we were covering in this workshop, you can make changes to the lessons locally on your machine and then send a `pull request` to the owner of repository. The owner will review your changes and decide to accept(merge) proposed changes or reject them.
 
 > ## Want to try?
-> Go to `SWC_2018-02-25` repo on your local machine and open a new topic branch for the project:
+> Go to `SWC_Spring2018_lessons` repo on your local machine and open a new topic branch for the project:
 > ```
 > $ git checkout -b YourName
 > ```

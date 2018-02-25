@@ -17,7 +17,7 @@ keypoints:
 
 So far, our work was restricted to the local machine. But if you want to share your repositories with your colleagues, it would be nice to have a central place where everyone could make their repositories available for comments, suggestions, and collaboration. GitHub is a service that allows us to do that. 
 
-If you have not created GitHub account, please go to [github.com] <https://github.com> and do it now. 
+If you have not created GitHub account, please go to [github.com](https://github.com) and do it now. 
 
 Now we want to create repository that will be a remote copy of our local `SWC_spring2018` repository. 
 ```

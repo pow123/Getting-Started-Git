@@ -30,7 +30,7 @@ Click on 'create repository'
 You have just created remote empty `SWC_spring2018` repository. This repository has a specific identifier URL associated with it.  As soon as the repository is created, GitHub displays a page with that URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on GitHub (Step 3)](./github-create-repo-03.png)
+![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
 
 This effectively does the following on GitHub's servers:
 

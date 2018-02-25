@@ -18,7 +18,7 @@ You can contribute to whatever project you like. Suppose you would like to add a
 
 Steps for making pull requests (or PRs):
 
-- go to the project you want to contribute to:<https://github.com/AnnaWilliford/SWC_Spring2018_lessons>.
+- go to the project you want to contribute to: <https://github.com/AnnaWilliford/SWC_Spring2018_lessons>.
 
 - copy the project to your GitHub account by clicking `fork` button on the top right corner of the page.
 

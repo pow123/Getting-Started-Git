@@ -74,4 +74,4 @@ This is it! You just made your local `SWC_spring2018` repository available on Gi
 > add it to your local directory and then push it to Github.
 > 
 > <https://hackmd.io/IwQwrCAMCmDGAcBaSB2eAjRAWAbAZgCZEQRhpFgth4cAzKgEwIeiA===?both>
-
+{: .challenge}

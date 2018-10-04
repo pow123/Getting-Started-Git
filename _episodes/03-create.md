@@ -15,25 +15,20 @@ keypoints:
 ---
 
 
-Let's use Git now that it's been configured. We’ll do our work in the `SWC_spring2018` folder. Check where you are using `pwd`. To change your working directory, use the `cd` command.
+Let's use Git now that it's been configured. We’ll do our work in the `TheDataShop` folder. So, let’s create the directory - pr folder - for our work and then move into that directory. Check where you are using the command `pwd`. To change your working directory, use the `cd` command.
 ```shell
-cd SWC_spring2018
-```
+pwd
 
-To start with, let's make a new folder `git_test` in the `SWC_spring2018` directory.
-
-Let’s create a directory for our work and then move into that directory. Suppose you started working on your thesis. Create a directory within `git_test`. 
-```shell
-#go to git_test
-cd git_test
+#go to Desktop
+cd Desktop
 
 #make folder
-$ mkdir Thesis
+mkdir TheDataShop
 
-#go into Thesis folder
-$ cd Thesis
+#go into that directory
+cd TheDataShop
 
-#check Thesis contents (list files)
+#check TheDataShop contents (list files)
 $ls
 ```
 
@@ -42,13 +37,14 @@ There is nothing, as expected. To show hidden files, add the flag `-a`.
 $ ls -a 
 ./  ../ 
 ```
-At this point we have the expected output. Let's make a new file in this folder, say a file for thesis notes. The file, titled "notes.txt" will contain the text "Chapter 1 notes.
+At this point we have the expected output. Let's add a new file in this folder - let's add the agenda and create a notes file. Visit Windows Explorer to add the Agenda to your directory. Now, the file, titled "notes.txt" will contain the text "Day 1 notes."
+
 ```shell
-$ echo "Chapter 1 notes" > notes.txt
+$ echo "Day 1 notes" > notes.txt
 
 #Now, listing contents, we see the added file.
 $ ls
-notes.txt
+notes.txt     TDS-agenda.docx
 ```
 Let's read the contents of the file with the `cat` command.
 ```shell
@@ -59,23 +55,28 @@ We can ask now if our new file, `notes.txt` is being tracked. We can do this wit
 $ git status
 fatal: Not a git repository (or any of the parent directories): .git
 ```
-This message means that `Thesis` folder is not under the control of Git, and none of the documents within this folder are being tracked.
+This message means that the `TheDataShop` folder is not under the control of Git, and none of the documents within this folder are being tracked.
 
-To place a folder under Git control, we need to initialize our `Thesis` folder to make it a repository—a place where Git can store versions of our files:
+To place a folder under Git control, we need to initialize our `TheDataShop` folder to make it a repository—a place where Git can store versions of our files:
 
 ```shell
-#check that you are in Thesis
+#check that you are in TheDataShop
 $ pwd
 
-#initialize Thesis directory with Git
+#check the contents
+$ls
+
+#initialize TheDataShop directory with Git
 $ git init
-Initialized empty Git repository in .../Thesis/.git/
+Initialized empty Git repository in .../TheDataShop/.git/
 
 #check contents to see the added directory
 $ ls -a
-./  ../  .git/  notes.txt
+./  notes.txt
+../  TDS-agenda.docx
+.git/
 ```
-The folder (in this case, Thesis) that contains .git sub-directory is called ***repository***. Git uses this (.git) special sub-directory to store all the information about the project, including all files and sub-directories located within the project’s directory. If we ever delete the .git sub-directory, we will lose the project’s history.
+The folder (in this case, TheDataShop) that contains .git sub-directory is called ***repository***. Git uses this (.git) special sub-directory to store all the information about the project, including all files and sub-directories located within the project’s directory. If we ever delete the .git sub-directory, we will lose the project’s history.
 
 We can check that everything is set up correctly by asking Git to tell us the status of our project. Let's try the `git status` command now.
 ```
@@ -87,34 +88,34 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-        notes.txt
+        notes.txt   TDS-agenda.docx
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 You can see that initializing a directory makes it visible to Git. 
 
 > ## Activity 3A: Places to Create Git Repositories
-> Along with tracking information for your Thesis (the project we have already created), say one would also like to track > information about each chapter. Despite a collaborator's concerns, you create a Ch1 project inside your Thesis project with the following sequence of commands:
+> Along with tracking information for your workshop (the project we have already created), say one would also like to track > information about each lesson. Despite a collaborator's concerns, you create a Lesson1 project inside your TheDataShop directory with the following sequence of commands:
 > ~~~
-> $ cd             # return to home directory
-> $ cd Thesis    # go into Thesis directory, which is already a Git repository
+> $ cd ..             # goes up a directory
+> $ cd TheDataShop    # go into TheDataShop directory, which is already a Git repository
 > $ ls -a          # ensure the .git sub-directory is still present in the Thesis directory
-> $ mkdir Ch1    # make a sub-directory Thesis/Ch1
-> $ cd Ch1       # go into Ch1 sub-directory
-> $ git init       # make the Ch1 sub-directory a Git repository
+> $ mkdir Lesson1    # make a sub-directory TheDataShop/Lesson1
+> $ cd Lesson1       # go into Lesson1 sub-directory
+> $ git init       # make the Lesson1 sub-directory a Git repository
 > $ ls -a          # ensure the .git sub-directory is present indicating we have created a new Git repository
 > ~~~
 >{: .bash}
-> Is the `git init` command, run inside the `Ch1` sub-directory, required for 
+> Is the `git init` command, run inside the `Lesson1` sub-directory, required for 
 > tracking files stored in the `Ch1` sub-directory?
 > 
 > > ## Solution
 > >
-> > No. You don't need to make the `Ch1` sub-directory a Git repository 
-> > because the `Thesis` repository will track all files, sub-directories, and 
-> > sub-directory files under the `Thesis` directory.  Thus, in order to track 
-> > all information about Ch1, you only needed to add the `Ch1` sub-directory
-> > to the `Thesis` directory.
+> > No. You don't need to make the `Lesson1` sub-directory into a Git repository 
+> > because the `TheDataShop` repository will track all files, sub-directories, and 
+> > sub-directory files under the `TheDataShop` directory.  Thus, in order to track 
+> > all information about Lesson1, you only needed to add the `Lesson1` sub-directory
+> > to the `TheDataShop` directory.
 > > 
 > > Additionally, Git repositories can interfere with each other if they are "nested" in the
 > > directory of another: The outer repository will try to version-control
@@ -135,14 +136,14 @@ You can see that initializing a directory makes it visible to Git.
 > {: .solution}
 {: .challenge}
 > ## Correcting `git init` Mistakes
-> Since a nested repository is redundant and may cause confusion down the road, you would like to remove the nested repository. How can you undo your last `git init` in the `Ch1` sub-directory?
+> Since a nested repository is redundant and may cause confusion down the road, you would like to remove the nested repository. How can you undo your last `git init` in the `Lesson1` sub-directory?
 >
 > > ## Solution -- USE WITH CAUTION!
 > >
-> > To recover from this little mistake, just remove the `.git` folder in the Ch1 sub-directory by running the following command from inside the 'Ch1' directory:
+> > To recover from this little mistake, just remove the `.git` folder in the Lesson1 sub-directory by running the following command from inside the 'Lesson1' directory:
 > >
 > > ~~~
-> > $ rm -rf Ch1/.git
+> > $ rm -rf Lesson1/.git
 > > ~~~
 > > {: .bash}
 > >
@@ -153,7 +154,7 @@ You can see that initializing a directory makes it visible to Git.
 {: .challenge}
 
 
-If you are still in `Ch1`, navigate back to `Thesis` using the `cd` command. Now Git tells us what files are in the directory and what is their status. In our case, Git says that there is a notes.txt file and it is not tracked. The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of.  Git also tells us that we need to use `git add` command to start tracking this file:
+If you are still in `Lesson1`, navigate back to `TheDataShop` using the `cd` command. Now Git tells us what files are in the directory and what is their status. In our case, Git says that there is a notes.txt file (and the agenda if you added it) and it is not tracked. The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of.  Git also tells us that we need to use `git add` command to start tracking this file:
 ```
 $ git add notes.txt
 
@@ -170,7 +171,7 @@ Changes to be committed:
 The current version of `notes.txt` is now ready (or staged) to be recorded by Git. If we check the status of our project again (`git status`), Git tells us that it’s noticed the new file. To record the current version of notes.txt, `git commit` command is used.
 ```
 #commit changes
-$ git commit -m "Start notes for Thesis"
+$ git commit -m "Start notes for data workshop"
 
 [master (root-commit) 76604e5] first note
  1 file changed, 1 insertion(+)
@@ -178,17 +179,17 @@ $ git commit -m "Start notes for Thesis"
 ```
 Git insists that we add files to the set we want to commit before actually committing anything. This allows us to commit our changes in stages and capture changes in logical portions rather than only large batches. For example, suppose we’re adding a few citations to relevant research to our thesis. We might want to commit those additions, and the corresponding bibliography entries, but not commit some of our work drafting the conclusion (which we haven’t finished yet).
 
-To allow for this, Git has a special staging area where it keeps track of things that have been added to the current changeset but not yet committed. When we run `git commit`, Git takes everything we have told it to save by using `git add` and stores a copy permanently inside the special `.git` directory. This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
-(or [revision]({{ page.root }}/reference/#revision)) and its short identifier is 76604e5 (Your commit may have another identifier.)
+To allow for this, Git has a special staging area where it keeps track of things that have been added to the current change-set but not yet committed. When we run `git commit`, Git takes everything we have told it to save by using `git add` and stores a copy permanently inside the special `.git` directory. This permanent copy is called a [commit]({{ page.root }}/reference/#commit)
+(or [revision]({{ page.root }}/reference/#revision)) and its short identifier is 76604e5 (Your commit will have another identifier.)
 
 
-We use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run `git commit` without the -m option, Git will launch BBEdit (or whatever other editor we configured as core.editor) so that we can write a longer message.
+We use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run `git commit` without the -m option, Git will launch BBEdit (or whatever other text editor we configured as core.editor) so that we can write a longer message.
 
 Good commit messages start with a brief (<50 characters) summary of changes made in the commit. If you want to go into more detail, add a blank line between the summary line and your additional notes.
 
 Now run `git status` again. 
 ```
-#check satus
+#check status
 $ git status
 On branch master
 nothing to commit, working tree clean
@@ -203,7 +204,7 @@ commit 76604e57022d52b2ebf3c92d0f5358354850fa37 (HEAD -> master)
 Author: pow123 <peace@uta.edu>
 Date:   Sun Feb 24 15:15:00 2018 -0600
 
-    Start notes for Thesis
+    Start notes for data workshop
     
 #or for a faster view
 $ git log --oneline
@@ -219,17 +220,17 @@ In summary, here are the steps that must be completed to track changes in your d
 
 
 > ## Activity 3B: Adding and Tracking Changes
-> Open notes.txt in text editor and add the following line of text to it: "Chapter 2 notes"
+> Open notes.txt in text editor and add the following line of text to it: "Day 2 notes"
 > Save your changes and track your changes with Git.
 > 
 > > ## Solution
 > >
-> > Open `notes.txt`, add the text, save and close. (Or, from the command line, type `open -t notes.txt` to open it in BBEdit.
+> > Open `notes.txt`, add the text, save and close. (Or, from the command line, type `open -t notes.txt` to open it in BBEdit, if installed.
 > > When we run git status now, it tells us that a file it already knows about has been modified. You can also see your new additions to `notes.txt` with `cat`:
 > > ~~~
 > > $ cat notes.txt
-> > Chapter 1 notes
-> > Chapter 2 notes
+> > Day 1 notes
+> > Day 2 notes
 > >
 > > $ git status
 > > On branch master
@@ -244,11 +245,11 @@ In summary, here are the steps that must be completed to track changes in your d
 > > {: .bash}
 > > 
 > > The last line is the key phrase: “no changes added to commit.” We have changed this file, 
-> > but we haven’t told Git we will want to save those changes (which we do with `git add`) 
+> > but we haven’t told Git we will want to save those changes (which we do with `git add`), 
 > > and we haven't saved them (which we do with `git commit`). So let’s do that now:
 > > ~~~
 > > $ git add notes.txt
-> > $ git commit -m "added ch 2 notes"
+> > $ git commit -m "added day 2 notes"
 > > ~~~
 > > {: .bash}
 > {: .solution}
@@ -262,14 +263,17 @@ Your versions (or commits) have unique identifiers. In addition, the most recent
 $ git diff 76604e5 HEAD notes.txt
 ```
  
-Now, let's see how to turn an existing directory into a git repository. You might want to track files for some of your existing projects. Let's create a new directory: `git_github` in the `SWC_spring2018` folder. How will you place this directory under Git control?
+Now, let's see how to turn an existing directory into a git repository. You might want to track files for some of your existing projects. Let's create a new directory: `git_github` on your Desktop. How will you place this directory under Git control?
 
 ```
-#Go to git_github
-$ cd ../../git_github
+#Go to Desktop
+$ cd ..
 
-#Or type the path directly
-$ cd ~/Desktop/SWC_spring2018/git_github
+#make the directory
+mkdir git_github
+
+#change into the Directory
+$ cd ~/Desktop/git_github
 
 #Add a file
 $ echo "Testing Testing" > testfile.txt
@@ -295,7 +299,7 @@ Now every file in this directory is being tracked. Notice that we added multiple
 # print the list of files that are part of a given commit
 $ git show --name-only 8af5f83
 ```
-As you continue working on this project, you will be adding new directories and files to it. 
+As you continue working throughout this workshop, you will be adding new directories and files to it. 
 Let's try it.
 
 > ## Activity 3C: Tracking File Changes

@@ -30,7 +30,7 @@ Click on 'create repository'
 You have just created remote empty `TheDataShop` repository. This repository has a specific identifier URL associated with it.  As soon as the repository is created, GitHub displays a page with that URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on GitHub (Step 3)](../fig/github-setup-repo.png)
+![Creating a Repository on GitHub (Step 3)](../fig/-setup-repo-github.png)
 
 This effectively does the following on GitHub's servers:
 

@@ -71,6 +71,3 @@ This is it! You just made your local `TheDataShop` repository available on GitHu
 > ## Optional Activity
 > Suppose you want to add another file to your repository. 
 > Add your git_test folder to your local directory 'TheDataShop' and then push the changes to Github.
-> 
-> <https://hackmd.io/IwQwrCAMCmDGAcBaSB2eAjRAWAbAZgCZEQRhpFgth4cAzKgEwIeiA===?both>
-> {: .challenge}

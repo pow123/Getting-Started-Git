@@ -19,15 +19,15 @@ So far, our work was restricted to the local machine. But if you want to share y
 
 If you have not created GitHub account, please go to [github.com](https://github.com) and do it now. 
 
-Now we want to create repository that will be a remote copy of our local `SWC_spring2018` repository. 
+Now we want to create repository that will be a remote copy of our local `TheDataShop` repository. 
 ```
 #From your GitHub account:
 Click on 'new repository'
-Repository name: 'SWC_spring2018'
+Repository name: 'TheDataShop'
 Type: public
 Click on 'create repository'
 ```
-You have just created remote empty `SWC_spring2018` repository. This repository has a specific identifier URL associated with it.  As soon as the repository is created, GitHub displays a page with that URL and some
+You have just created remote empty `TheDataShop` repository. This repository has a specific identifier URL associated with it.  As soon as the repository is created, GitHub displays a page with that URL and some
 information on how to configure your local repository:
 
 ![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
@@ -35,8 +35,8 @@ information on how to configure your local repository:
 This effectively does the following on GitHub's servers:
 
 ~~~
-$ mkdir SWC_spring2018
-$ cd SWC_spring2018
+$ mkdir TheDataShop
+$ cd TheDataShop
 $ git init
 ~~~
 {: .bash}
@@ -66,12 +66,11 @@ Once the nickname origin is set up, this command will push the changes from our 
 ```
 $ git push -u origin master
 ```
-This is it! You just made your local `SWC_spring2018` repository available on GitHub for everyone to access. You are now in position to share your work and collaborate with others. How cool is this?
+This is it! You just made your local `TheDataShop` repository available on GitHub for everyone to access. You are now in position to share your work and collaborate with others. How cool is this?
 
 > ## Optional Activity
 > Suppose you want to add another file to your repository. 
-> Download command history file for the Python lesson this morning and 
-> add it to your local directory and then push it to Github.
+> Add your git_test folder to your local directory 'TheDataShop' and then push the changes to Github.
 > 
 > <https://hackmd.io/IwQwrCAMCmDGAcBaSB2eAjRAWAbAZgCZEQRhpFgth4cAzKgEwIeiA===?both>
 > {: .challenge}

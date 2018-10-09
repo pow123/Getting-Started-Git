@@ -3,11 +3,11 @@ layout: lesson
 root: .
 ---
 
-SWC workshop, February 22
+The Data 'Shop - UWI Mona, Oct 09, 2018
 Instructor: Peace
-Time: 1.5 hours
 
-This lesson is a modified version of [Software Carpentry Git Lesson](http://swcarpentry.github.io/git-novice/) and part of the UTA Spring 2018 [Software Carpentry workshop](https://annawilliford.github.io/2018-02-24-UTA/).
+
+This lesson is a modified version of [Software Carpentry Git Lesson](http://swcarpentry.github.io/git-novice/) and part of the [The Data 'Shop](https://thedatashop.weebly.com).
 
 Additional resources:
 [tutorials](https://www.atlassian.com/git/tutorials)

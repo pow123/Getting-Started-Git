@@ -15,7 +15,7 @@ keypoints:
 ---
 
 
-Let's use Git now that it's been configured. We’ll do our work in the `TheDataShop` folder. So, let’s create the directory - pr folder - for our work and then move into that directory. Check where you are using the command `pwd`. To change your working directory, use the `cd` command.
+Let's use Git now that it's been configured. We’ll do our work in the `TheDataShop` folder. So, let’s create the directory - or folder - for our work and then move into that directory. Check where you are using the command `pwd`. To change your working directory, use the `cd` command.
 ```shell
 pwd
 
@@ -37,7 +37,7 @@ There is nothing, as expected. To show hidden files, add the flag `-a`.
 $ ls -a 
 ./  ../ 
 ```
-At this point we have the expected output. Let's add a new file in this folder - let's add the agenda and create a notes file. Visit Windows Explorer to add the Agenda to your directory. Now, the file, titled "notes.txt" will contain the text "Day 1 notes."
+At this point we have the expected output. Let's add a new file in this folder - let's add the agenda and create a notes file. Click here to [download the Agenda](https://github.com/pow123/UWI-Mona/raw/master/TDS-Agenda.docx) and then add it to your directory. Now, the file, titled "notes.txt" will contain the text "Day 1 notes."
 
 ```shell
 $ echo "Day 1 notes" > notes.txt

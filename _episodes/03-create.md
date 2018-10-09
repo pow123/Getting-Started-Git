@@ -37,14 +37,14 @@ There is nothing, as expected. To show hidden files, add the flag `-a`.
 $ ls -a 
 ./  ../ 
 ```
-At this point we have the expected output. Let's add a new file in this folder - let's add the agenda and create a notes file. Click here to [download the Agenda](https://github.com/pow123/UWI-Mona/raw/master/TDS-Agenda.docx) and then add it to your directory. Now, the file, titled "notes.txt" will contain the text "Day 1 notes."
+At this point we have the expected output. Let's add a new file in this folder - let's add the agenda and create a notes file. Click here to [download the Agenda](https://github.com/pow123/UWI-Mona/raw/master/TDS-Agenda.docx) and then add it to your directory. Now, use the code below to create the file, titled "notes.txt", which will contain the text "Day 1 notes."
 
 ```shell
 $ echo "Day 1 notes" > notes.txt
 
 #Now, listing contents, we see the added file.
 $ ls
-notes.txt     TDS-agenda.docx
+notes.txt     TDS-Agenda.docx
 ```
 Let's read the contents of the file with the `cat` command.
 ```shell
@@ -73,7 +73,7 @@ Initialized empty Git repository in .../TheDataShop/.git/
 #check contents to see the added directory
 $ ls -a
 ./  notes.txt
-../  TDS-agenda.docx
+../  TDS-Agenda.docx
 .git/
 ```
 The folder (in this case, TheDataShop) that contains .git sub-directory is called ***repository***. Git uses this (.git) special sub-directory to store all the information about the project, including all files and sub-directories located within the project’s directory. If we ever delete the .git sub-directory, we will lose the project’s history.
@@ -88,7 +88,7 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-        notes.txt   TDS-agenda.docx
+        notes.txt   TDS-Agenda.docx
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
@@ -154,7 +154,7 @@ You can see that initializing a directory makes it visible to Git.
 {: .challenge}
 
 
-If you are still in `Lesson1`, navigate back to `TheDataShop` using the `cd` command. Now Git tells us what files are in the directory and what is their status. In our case, Git says that there is a notes.txt file (and the agenda if you added it) and it is not tracked. The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of.  Git also tells us that we need to use `git add` command to start tracking this file:
+If you are still in `Lesson1`, navigate back to `TheDataShop` using the `cd` command. Now Git tells us what files are in the directory and what is their status. In our case, Git says that there is a notes.txt file (and the agenda if you added it) and it is not tracked. The “untracked files” message means that there’s a file in the directory that Git isn’t keeping track of. Git also tells us that we need to use `git add` command to start tracking this file:
 ```
 $ git add notes.txt
 
@@ -183,7 +183,7 @@ To allow for this, Git has a special staging area where it keeps track of things
 (or [revision]({{ page.root }}/reference/#revision)) and its short identifier is 76604e5 (Your commit will have another identifier.)
 
 
-We use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run `git commit` without the -m option, Git will launch BBEdit (or whatever other text editor we configured as core.editor) so that we can write a longer message.
+We use the -m flag (for “message”) to record a short, descriptive, and specific comment that will help us remember later on what we did and why. If we just run `git commit` without the -m option, Git will launch BBEdit (or whatever other text editor you have configured as core.editor) so that we can write a longer message.
 
 Good commit messages start with a brief (<50 characters) summary of changes made in the commit. If you want to go into more detail, add a blank line between the summary line and your additional notes.
 
@@ -218,42 +218,6 @@ In summary, here are the steps that must be completed to track changes in your d
 
 ![](http://swcarpentry.github.io/git-novice/fig/git-staging-area.svg)
 
-
-> ## Activity 3B: Adding and Tracking Changes
-> Open notes.txt in text editor and add the following line of text to it: "Day 2 notes"
-> Save your changes and track your changes with Git.
-> 
-> > ## Solution
-> >
-> > Open `notes.txt`, add the text, save and close. (Or, from the command line, type `open -t notes.txt` to open it in BBEdit, if installed.
-> > When we run git status now, it tells us that a file it already knows about has been modified. You can also see your new additions to `notes.txt` with `cat`:
-> > ~~~
-> > $ cat notes.txt
-> > Day 1 notes
-> > Day 2 notes
-> >
-> > $ git status
-> > On branch master
-> > Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-> >
-> >   modified:   notes.txt
-> >
-> > no changes added to commit (use "git add" and/or "git commit -a")
-> > ~~~
-> > {: .bash}
-> > 
-> > The last line is the key phrase: “no changes added to commit.” We have changed this file, 
-> > but we haven’t told Git we will want to save those changes (which we do with `git add`), 
-> > and we haven't saved them (which we do with `git commit`). So let’s do that now:
-> > ~~~
-> > $ git add notes.txt
-> > $ git commit -m "added day 2 notes"
-> > ~~~
-> > {: .bash}
-> {: .solution}
-{: .challenge}
   
 Now, run `git log`.  The output of `git log` tells you the history of your changes. Your commit messages are very important, in case you want to restore an old version of the document, they will help you to pick out the version you want.
 
